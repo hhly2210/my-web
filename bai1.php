@@ -3,8 +3,6 @@
 <body>
 <div>
         <?php 
-
-
             // Nhập m,n
                 $m=5;$n=5;
                 echo "Chiều cao: ".$m."<br/>";
