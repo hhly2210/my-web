@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+        <h4>Tính tổng của 1 - 2 + 3 - 4 + ... + ((-1)^(n-1))*n trong đó ((-1)^(n-1))*n ?</h6>
     <?php
-        $n = 9;
+        $n = 5;
+        echo "n = $n<br>";
         $sum = 0;
         for($i = 1; $i <= $n; $i++) {
             if($i % 2 == 0) {
@@ -17,7 +19,7 @@
                 $sum += $i;
             }
         }
-        echo "Tổng của 1 - 2 + 3 - 4 + ... + ((-1)^(n-1))*n trong đó ((-1)^(n-1))*n = $n là : $sum";
+        echo "Tổng với $n là : $sum";
     ?>
 </body>
 </html>

@@ -7,43 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+    <h4>VIết chương trình tính fibonacci thứ n <br></h4>
     <?php
-
-        // Cách 1: Fibonacci dùng vòng for
         function fibonacci($n) {
-            $f0 = 0;
-            $f1 = 1;
-            $fn = 1;
-
             if($n < 0) {
                 return -1;
             } else if ($n == 0 || $n == 1) {
                 return $n;
             } else {
-                for($i = 2; $i < $n; $i++) {
-                    $f0 = $f1;
-                    $f1 = $fn;
-                    $fn = $f0 + $f1;
-                }
-            }
-            return "Cách 1: Số fibonacci thứ $n = ". $fn ."</br>";
-        }    
-
-        echo fibonacci(7);
-
-        // Cách 2: Fibonacci dùng đệ quy
-        function fibonacci2($n) {
-            if($n < 0) {
-                return -1;
-            } else if ($n == 0 || $n == 1) {
-                return $n;
-            } else {
-                return fibonacci2($n - 1) + fibonacci2($n - 2);
+                return fibonacci($n - 1) + fibonacci($n - 2);
             }
         }
-
-        echo "Cách 2: Số fibonacci = ";
-        echo fibonacci2(6);
+        $n = 8;
+        echo " n = $n <br>";
+        echo "Số fibonacci là :". fibonacci($n);
     ?>
 </body>
 </html>
